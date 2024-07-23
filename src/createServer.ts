@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import { phonesRouter } from './routes/phones.router';
+import { tabletsRouter } from './routes/tablet.router';
 
 export const createServer = () => {
   const app = express();
@@ -11,6 +12,7 @@ export const createServer = () => {
   });
 
   app.use('/phones', phonesRouter);
+  app.use('/tablets', tabletsRouter);
 
   return app;
 };
